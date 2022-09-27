@@ -137,7 +137,7 @@ $infoTerminos = !empty(getInfoPage(PTERMINOS)) ? getInfoPage(PTERMINOS)['conteni
 							    <label for="txtPassword">Contraseña</label>
 							    <input type="password" class="form-control" id="txtPassword" name="txtPassword">
 							  </div>
-							  <button type="submit" class="btn btn-primary">Iniciar sesión</button>
+							  <button type="submit" class="btn btn-success">Iniciar sesión</button>
 							</form>
 
 						  </div>
@@ -164,7 +164,7 @@ $infoTerminos = !empty(getInfoPage(PTERMINOS)) ? getInfoPage(PTERMINOS)['conteni
 										<input type="email" class="form-control valid validEmail" id="txtEmailCliente" name="txtEmailCliente" required="">
 									</div>
 						 		</div>
-								<button type="submit" class="btn btn-primary">Regístrate</button>
+								<button type="submit" class="btn btn-success">Regístrate</button>
 						 	</form>
 						  </div>
 						</div>
@@ -234,16 +234,20 @@ $infoTerminos = !empty(getInfoPage(PTERMINOS)) ? getInfoPage(PTERMINOS)['conteni
 								Método de pago
 							</h4>
 							<div class="divmetodpago">
-								<div>
+
+								<!--METODO DE PAGO PAYPAL-->
+								<!--<div>
 									<label for="paypal">
 										<input type="radio" id="paypal" class="methodpago" name="payment-method" checked="" value="Paypal">
 										<img src="<?= media()?>/images/img-paypal.jpg" alt="Icono de PayPal" class="ml-space-sm" width="74" height="20">
 									</label>
-								</div>
+								</div>-->
+								<!--METODO DE PAGO PAYPAL-->
+
 								<div>
 									<label for="contraentrega">
 										<input type="radio" id="contraentrega" class="methodpago" name="payment-method" value="CT">
-										<span>Contra Entrega</span>
+										<span>Mediante Pedido</span>
 									</label>
 								</div>
 								<div id="divtipopago" class="notblock" >
@@ -266,6 +270,7 @@ $infoTerminos = !empty(getInfoPage(PTERMINOS)) ? getInfoPage(PTERMINOS)['conteni
 									<br>
 									<button type="submit" id="btnComprar" class="flex-c-m stext-101 cl0 size-116 bg3 bor14 hov-btn3 p-lr-15 trans-04 pointer">Procesar pedido</button>
 								</div>
+								<!--PAYPAL -->
 								<div id="divpaypal">
 									<div>
 										<p>Para completar la transacción, te enviaremos a los servidores seguros de PayPal.</p>
@@ -273,6 +278,8 @@ $infoTerminos = !empty(getInfoPage(PTERMINOS)) ? getInfoPage(PTERMINOS)['conteni
 									<br>
 									<div id="paypal-btn-container"></div>
 								</div>
+								<!--PAYPAL -->
+
 							</div>
 						</div>
 					</div>			

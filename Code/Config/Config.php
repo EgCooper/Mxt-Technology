@@ -1,15 +1,22 @@
 <?php 
-	//const BASE_URL = "http://localhost/tienda_virtual";
-	const BASE_URL = "https://mxt-technology.pinguinos.org/";
+	const BASE_URL = "http://localhost/Mxt-Technology";
+	//const BASE_URL = "https://mxt-technology.pinguinos.org";
 
 	//Zona horaria
 	date_default_timezone_set('America/La_Paz');
 
 	//Datos de conexión a Base de Datos
+	//const DB_HOST = "localhost";
+//	const DB_NAME = "c4db_tiendavirtual";
+//	const DB_USER = "c4admin";
+//	const DB_PASSWORD = "nbx_SLW2Tq";
+//	const DB_CHARSET = "utf8";
+
+	//Datos de conexión a Base de Datos
 	const DB_HOST = "localhost";
 	const DB_NAME = "c4db_tiendavirtual";
-	const DB_USER = "c4admin";
-	const DB_PASSWORD = "nbx_SLW2Tq";
+	const DB_USER = "root";
+	const DB_PASSWORD = "";
 	const DB_CHARSET = "utf8";
 
 	//Para envío de correo
@@ -99,7 +106,7 @@
 
 	//REDES SOCIALES
 	const FACEBOOK = "https://www.facebook.com/MaxTechBolivia";
-	//const INSTAGRAM = "https://www.instagram.com/febel24/";
+	const INSTAGRAM = "https://www.instagram.com/victorpmora/";
 	
 
  ?>

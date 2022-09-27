@@ -82,7 +82,7 @@ $urlShared = base_url()."/tienda/producto/".$arrProducto['idproducto']."/".$arrP
 											<i class="fs-16 zmdi zmdi-plus"></i>
 										</div>
 									</div>
-
+									<br><br><br><br><br>
 									<button id="<?= openssl_encrypt($arrProducto['idproducto'],METHODENCRIPT,KEY); ?>" class="flex-c-m stext-101 cl0 size-101 bg1 bor1 hov-btn1 p-lr-15 trans-04 js-addcart-detail">
 										Agregar al carrito
 									</button>

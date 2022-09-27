@@ -477,7 +477,7 @@ Input, textarea : 14px/1.6 '', Arial, sans-serif;
   margin-bottom: 20px;
 }
 .container ul, .container ul li{
-  list-style: initial;
+  list-style: none;
 }
 .container ol li{
   list-style: image-set;
@@ -1178,13 +1178,10 @@ Input, textarea : 14px/1.6 '', Arial, sans-serif;
   padding-left: 20px;
 }
 
-.rs1-select2 .select2-container .select2-results__option[aria-selected="true"] {
-  background: #6c7ae0;
-  color: white;
-}
+
 
 .rs1-select2 .select2-container .select2-results__option--highlighted[aria-selected] {
-  background: #6c7ae0;
+  background: #70E000;
   color: white;
 }
 
@@ -2147,20 +2144,21 @@ input.num-product::-webkit-inner-spin-button {
     BOTONES Y LETRAS FOOTHER NOSOTROS CONTACTANOS
 ==================================================================*/
 .cl0 {color: #70E000;}
-.cl1 {color: #717fe0;}
+.cl1 {color: #000;}
 /* LETRAS BODY HEADER Y CARRITOS */
-.cl2 {color: #333;}
+.cl2 {color: #000;}
 .cl3 {color: #666;}
 .cl4 {color: #999;}
 /* LETRAS BOTON VER MAS */
-.cl5 {color: rgb(255, 255, 255);}
-.cl6 {color: #1d1d1d;}
+.cl5 {color: #70E000;}
+.cl6 {color: #000;}
 .cl7 {color: #b2b2b2;}
 .cl8 {color: #555;}
 .cl9 {color: #aaa;}
 .cl10 {color: #1d1d1d;}
 .cl11 {color: #f9ba48;}
 .cl12 {color: #ccc;}
+.correocolor {color:#000;}
 
 /*//////////////////////////////////////////////////////////////////
 [ S-Text 0 - 15 ]*/
@@ -2669,7 +2667,7 @@ input.num-product::-webkit-inner-spin-button {
 .bg0 {background-color: #fff;}
 /*BOTONES VER MAS */
 .bg1 {background-color: #fff;}
-.bg2 {background-color: #70e000;}
+.bg2 {background-color: #fff;}
 /*BOTONES VER MAS */
 
 .bg3 {background-color: #222;}
@@ -2828,7 +2826,7 @@ input.num-product::-webkit-inner-spin-button {
 
 /*---------------------------------------------*/
 .js-addedwish-detail {
-  color: #6c7ae0;
+  color: #70E000;
 }
 
 /*---------------------------------------------*/
@@ -3107,20 +3105,20 @@ input.num-product::-webkit-inner-spin-button {
 
 /*---------------------------------------------*/
 .hov-btn1:hover {
-  border-color: #222;
-  background-color: #222;
-  color: #fff;
+  border-color: #000;
+  background-color: #000;
+  color: #70E000;
 }
 
 .hov-btn1:hover i {
-  color: #fff;
+  color: #fff(0, 0, 0);
 }
 
 /*BOTON SUSCRIBIRME*/
 .hov-btn2:hover {
   border-color: #fff;
   background-color: #FFF;
-  color: #000;
+  color: #70E000;
 }
 
 /*BOTON CATEGORIAS PAGINA TIENDA*/

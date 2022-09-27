@@ -76,7 +76,7 @@ $idpagina = $data['page']['idpost'];
 
 						<p class="stext-115 cl1 size-213 p-t-18">
 
-							<a class="" href="tel:<?= TELEMPRESA ?>"><?= TELEMPRESA ?></a>
+							<a class="correocolor" href="tel:<?= TELEMPRESA ?>"><?= TELEMPRESA ?></a>
 						</p>
 					</div>
 				</div>
@@ -90,9 +90,11 @@ $idpagina = $data['page']['idpost'];
 						<span class="mtext-110 cl2">
 							E-mail
 						</span>
+						
+						<p class ="stext-115 cl1 size-213 p-t-18 ">
+							
+							<a class="correocolor" href="mailto:<?= EMAIL_EMPRESA ?>"><?= EMAIL_EMPRESA ?>
 
-						<p class="stext-115 cl1 size-213 p-t-18">
-							<a class="" href="mailto:<?= EMAIL_EMPRESA ?>"><?= EMAIL_EMPRESA ?>
 						</p>
 					</div>
 				</div>
@@ -100,16 +102,20 @@ $idpagina = $data['page']['idpost'];
 		</div>
 	</div>
 </section>	
+<!--MAPA PAGINA CONTACTO -->
 <?php 
-		echo $data['page']['contenido'];
-	}else{
+	/*	echo $data['page']['contenido'];
+	}else{*/
 ?>
+
+<!--ESTAMOS TRABAJANDO -->
+<!--
 <div>
 	<div class="container-fluid py-5 text-center" >
 		<img src="<?= media() ?>/images/construction.png" alt="En construcción">
 		<h3>Estamos trabajando para usted.</h3>
 	</div>
-</div>
+</div>-->
 <?php 
 	}
 	footerTienda($data);

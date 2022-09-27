@@ -15,7 +15,7 @@ headerTienda($data);
   <p>Muy pronto estaremos en contacto para coordinar la entrega.</p>
   <p>Puedes ver el estado de tu pedido en la sección pedidos de tu usuario.</p>
   <br>
-  <a class="btn btn-primary btn-lg" href="<?= base_url(); ?>" role="button">Continuar</a>
+  <a class="btn btn-success" href="<?= base_url(); ?>" role="button">Continuar</a>
 </div>
 
 <?php 
