@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Oct 04, 2022 at 08:57 PM
+-- Generation Time: Oct 08, 2022 at 11:49 PM
 -- Server version: 10.5.16-MariaDB
 -- PHP Version: 5.4.16
 
@@ -17,7 +17,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `c4db_tiendavirtual`
+-- Database: `c4cooper`
 --
 
 -- --------------------------------------------------------
@@ -81,17 +81,14 @@ CREATE TABLE IF NOT EXISTS `detalle_pedido` (
   `productoid` bigint(20) NOT NULL,
   `precio` decimal(11,2) NOT NULL,
   `cantidad` int(11) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=26 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_swedish_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=28 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_swedish_ci;
 
 --
 -- Dumping data for table `detalle_pedido`
 --
 
 INSERT INTO `detalle_pedido` (`id`, `pedidoid`, `productoid`, `precio`, `cantidad`) VALUES
-(22, 19, 10, 1500.00, 1),
-(23, 20, 9, 500.00, 1),
-(24, 20, 8, 650.00, 2),
-(25, 21, 5, 500.00, 1);
+(27, 23, 10, 1500.00, 1);
 
 -- --------------------------------------------------------
 
@@ -179,16 +176,14 @@ CREATE TABLE IF NOT EXISTS `pedido` (
   `tipopagoid` bigint(20) NOT NULL,
   `direccion_envio` text COLLATE utf8mb4_swedish_ci NOT NULL,
   `status` varchar(100) COLLATE utf8mb4_swedish_ci DEFAULT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=22 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_swedish_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=24 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_swedish_ci;
 
 --
 -- Dumping data for table `pedido`
 --
 
 INSERT INTO `pedido` (`idpedido`, `referenciacobro`, `idtransaccionpaypal`, `datospaypal`, `personaid`, `fecha`, `costo_envio`, `monto`, `tipopagoid`, `direccion_envio`, `status`) VALUES
-(19, '7584736336', NULL, NULL, 18, '2022-10-03 21:17:34', 12.00, 1512.00, 2, 'Temporal Alipio Valencia Vega Faustino Suarez, Cochabamba', 'Cancelado'),
-(20, '7585727', NULL, NULL, 19, '2022-10-03 21:22:48', 12.00, 1812.00, 2, 'Zona sud 6 de Agosto, Cochabamba', 'Entregado'),
-(21, '47586939', NULL, NULL, 5, '2022-10-03 21:29:06', 12.00, 512.00, 2, 'Temporal Fasutino Suarez, Cochabamba', 'Reembolsado');
+(23, '758475647', NULL, NULL, 21, '2022-10-09 00:21:54', 12.00, 1512.00, 2, 'Temporal Alipio Valencia Vega, Cochabamba Cercado', 'Completo');
 
 -- --------------------------------------------------------
 
@@ -204,7 +199,7 @@ CREATE TABLE IF NOT EXISTS `permisos` (
   `w` int(11) NOT NULL DEFAULT 0,
   `u` int(11) NOT NULL DEFAULT 0,
   `d` int(11) NOT NULL DEFAULT 0
-) ENGINE=InnoDB AUTO_INCREMENT=39 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_swedish_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=75 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_swedish_ci;
 
 --
 -- Dumping data for table `permisos`
@@ -220,15 +215,6 @@ INSERT INTO `permisos` (`idpermiso`, `rolid`, `moduloid`, `r`, `w`, `u`, `d`) VA
 (9, 1, 7, 1, 1, 1, 1),
 (10, 1, 8, 1, 1, 1, 1),
 (11, 1, 9, 1, 1, 1, 1),
-(12, 2, 1, 1, 1, 1, 1),
-(13, 2, 2, 0, 0, 0, 0),
-(14, 2, 3, 1, 1, 1, 0),
-(15, 2, 4, 1, 1, 1, 0),
-(16, 2, 5, 1, 1, 1, 0),
-(17, 2, 6, 1, 1, 1, 0),
-(18, 2, 7, 1, 0, 0, 0),
-(19, 2, 8, 1, 0, 0, 0),
-(20, 2, 9, 1, 1, 1, 1),
 (21, 3, 1, 0, 0, 0, 0),
 (22, 3, 2, 0, 0, 0, 0),
 (23, 3, 3, 0, 0, 0, 0),
@@ -238,15 +224,24 @@ INSERT INTO `permisos` (`idpermiso`, `rolid`, `moduloid`, `r`, `w`, `u`, `d`) VA
 (27, 3, 7, 0, 0, 0, 0),
 (28, 3, 8, 0, 0, 0, 0),
 (29, 3, 9, 0, 0, 0, 0),
-(30, 4, 1, 1, 0, 0, 0),
-(31, 4, 2, 0, 0, 0, 0),
-(32, 4, 3, 1, 1, 1, 0),
-(33, 4, 4, 1, 0, 0, 0),
-(34, 4, 5, 1, 0, 1, 0),
-(35, 4, 6, 0, 0, 0, 0),
-(36, 4, 7, 1, 0, 0, 0),
-(37, 4, 8, 1, 0, 0, 0),
-(38, 4, 9, 0, 0, 0, 0);
+(39, 4, 1, 1, 0, 0, 0),
+(40, 4, 2, 0, 0, 0, 0),
+(41, 4, 3, 1, 1, 1, 0),
+(42, 4, 4, 1, 1, 1, 0),
+(43, 4, 5, 1, 0, 1, 1),
+(44, 4, 6, 0, 0, 0, 0),
+(45, 4, 7, 0, 0, 0, 0),
+(46, 4, 8, 0, 0, 0, 0),
+(47, 4, 9, 0, 0, 0, 0),
+(66, 2, 1, 1, 1, 1, 1),
+(67, 2, 2, 0, 0, 0, 0),
+(68, 2, 3, 1, 1, 1, 0),
+(69, 2, 4, 1, 1, 1, 0),
+(70, 2, 5, 1, 1, 1, 0),
+(71, 2, 6, 1, 1, 1, 0),
+(72, 2, 7, 0, 0, 0, 0),
+(73, 2, 8, 0, 0, 0, 0),
+(74, 2, 9, 0, 0, 0, 0);
 
 -- --------------------------------------------------------
 
@@ -269,17 +264,17 @@ CREATE TABLE IF NOT EXISTS `persona` (
   `rolid` bigint(20) NOT NULL,
   `datecreated` datetime NOT NULL DEFAULT current_timestamp(),
   `status` int(11) NOT NULL DEFAULT 1
-) ENGINE=InnoDB AUTO_INCREMENT=20 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_swedish_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=23 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_swedish_ci;
 
 --
 -- Dumping data for table `persona`
 --
 
 INSERT INTO `persona` (`idpersona`, `identificacion`, `nombres`, `apellidos`, `telefono`, `email_user`, `password`, `nit`, `nombrefiscal`, `direccionfiscal`, `token`, `rolid`, `datecreated`, `status`) VALUES
-(5, '9519261', 'Victor Angel', 'Pinto Mora', 75906306, 'vicox30@gmail.com', '25076c8283c9e2e2ad46ab693851d2fa7337b9c8b3cca7267c3e6555bd9540fe', NULL, NULL, NULL, '73ba03d484d87010685b-b5c3b1882874f83fdce8-f79f2ae060ca0f0fed20-58518ca877a6fa9bc220', 1, '2022-09-23 14:34:08', 1),
-(17, '8767543', 'Nicolas', 'Quintanilla', 6764635, 'niclasx48@gmail.com', 'f65c20e8412f0eb2ade4531ad3d2471bcbafe5f2d3cdaa6324a6e47356a3f819', NULL, NULL, NULL, 'df23509cb4e151c40c3f-50104960a48a36a09723-817c9740051a8f780b71-685cd12b119e77a9158b', 4, '2022-10-03 09:12:16', 1),
-(18, '7857462', 'Cliente', 'Cliente', 78322334, 'cliente@gmail.com', '541c83c19b030576f208a77f075f8ff3399beb3b3137c835fc8327d085308f17', NULL, NULL, NULL, NULL, 3, '2022-10-03 21:13:43', 1),
-(19, '6475646', 'Clientee', 'Cliente', 64564765, 'cliente2@gmail.com', 'df5957ed6276df93edaa404f27f541e20e7bd619094e01db10021d332fa333ab', NULL, NULL, NULL, NULL, 3, '2022-10-03 21:22:30', 0);
+(5, '9519261', 'Administrador', 'Pinto', 75906306, 'vicox30@gmail.com', '17672158eb11f7de7b753048f4fd35b42bc59d0801e7cd4ecf782e7f0bc5e74d', NULL, NULL, NULL, '1fbaf101e296c3ec3b67-8934126668307856947b-a36a9c64c0c2183965cb-7174d092ece337c98001', 1, '2022-09-23 14:34:08', 1),
+(20, '0909897', 'Supervisor', 'Torrico', 76474636, 'supervisor@gmail.com', '02423ab2e61297b8262449c93e19be42fb5bbb275860a7d93b1ebdc7b6535ed7', NULL, NULL, NULL, NULL, 2, '2022-10-09 00:14:01', 1),
+(21, '7574632', 'Cliente', 'Lopez', 76485746, 'cliente@gmail.com', '09a31a7001e261ab1e056182a71d3cf57f582ca9a29cff5eb83be0f0549730a9', NULL, NULL, NULL, NULL, 3, '2022-10-09 00:14:26', 1),
+(22, '7564764', 'Vendedor', 'Morales', 65463536, 'vendedor@gmail.com', '56976bf24998ca63e35fe4f1e2469b5751d1856003e8d16fef0aafef496ed044', NULL, NULL, NULL, NULL, 4, '2022-10-09 00:21:02', 1);
 
 -- --------------------------------------------------------
 
@@ -539,7 +534,7 @@ ALTER TABLE `contacto`
 -- AUTO_INCREMENT for table `detalle_pedido`
 --
 ALTER TABLE `detalle_pedido`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=26;
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=28;
 --
 -- AUTO_INCREMENT for table `detalle_temp`
 --
@@ -559,17 +554,17 @@ ALTER TABLE `modulo`
 -- AUTO_INCREMENT for table `pedido`
 --
 ALTER TABLE `pedido`
-  MODIFY `idpedido` bigint(20) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=22;
+  MODIFY `idpedido` bigint(20) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=24;
 --
 -- AUTO_INCREMENT for table `permisos`
 --
 ALTER TABLE `permisos`
-  MODIFY `idpermiso` bigint(20) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=39;
+  MODIFY `idpermiso` bigint(20) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=75;
 --
 -- AUTO_INCREMENT for table `persona`
 --
 ALTER TABLE `persona`
-  MODIFY `idpersona` bigint(20) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=20;
+  MODIFY `idpersona` bigint(20) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=23;
 --
 -- AUTO_INCREMENT for table `post`
 --

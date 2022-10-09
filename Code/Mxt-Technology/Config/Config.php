@@ -1,20 +1,20 @@
 <?php 
 	//const BASE_URL = "http://localhost/Mxt-Technology";
-	const BASE_URL = "https://mxt-technology.pinguinos.org";
+	const BASE_URL = "http://mxttechnology.pinguinos.org/";
 
 	//Zona horaria
 	date_default_timezone_set('America/La_Paz');
 
 	//Datos de conexión a Base de Datos Host
 	const DB_HOST = "localhost";
-	const DB_NAME = "c4db_tiendavirtual";
-	const DB_USER = "c4admin";
-	const DB_PASSWORD = "nbx_SLW2Tq";
+	const DB_NAME = "c4cooper";
+	const DB_USER = "c4cooper";
+	const DB_PASSWORD = "Cooper75906306";
 	const DB_CHARSET = "utf8";
 
 	//Datos de conexión a Base de Datos Local
 	//const DB_HOST = "localhost";
-	//const DB_NAME = "c4db_tiendavirtual";
+	//const DB_NAME = "c4cooper";
 	//const DB_USER = "root";
 	//const DB_PASSWORD = "";
 	//const DB_CHARSET = "utf8";
@@ -43,7 +43,7 @@
 	//Datos envio de correo
 	const NOMBRE_REMITENTE = "Mxt-Technology";
 	//Ingresar el email del remitente smtp host o cuenta personal si sera local
-	const EMAIL_REMITENTE = "";
+	const EMAIL_REMITENTE = "mxtmaxtechnology@gmail.com";
 	const NOMBRE_EMPESA = "Mxt-Technology";
 	const WEB_EMPRESA = "https://mxt-technology.pinguinos.org/";
 
@@ -54,10 +54,10 @@
 	const DIRECCION = "SuperMall Local 21 Pb, Ciudad Cochabamba, Bolivia";
 	const TELEMPRESA = "+(591) 4 4666063";
 	const WHATSAPP = "+591 79328635";
-	const EMAIL_EMPRESA = "mxt.srl_ventas@hotmail.com";
-	const EMAIL_PEDIDOS = "mxt.srl_ventas@hotmail.com"; 
-	const EMAIL_SUSCRIPCION = "mxt.srl_ventas@hotmail.com";
-	const EMAIL_CONTACTO = "mxt.srl_ventas@hotmail.com";
+	const EMAIL_EMPRESA = "mxtmaxtechnology@gmail.com";
+	const EMAIL_PEDIDOS = "mxtmaxtechnology@gmail.com"; 
+	const EMAIL_SUSCRIPCION = "mxtmaxtechnology@gmail.com";
+	const EMAIL_CONTACTO = "mxtmaxtechnology@gmail.com";
 
 	const CAT_SLIDER = "1,2,3";
 	const CAT_BANNER = "4,5,6";
