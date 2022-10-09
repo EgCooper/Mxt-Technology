@@ -177,7 +177,7 @@ $infoTerminos = !empty(getInfoPage(PTERMINOS)) ? getInfoPage(PTERMINOS)['conteni
 			<div class="col-sm-10 col-lg-7 col-xl-5 m-lr-auto m-b-50">
 				<div class="bor10 p-lr-40 p-t-30 p-b-40 m-l-63 m-r-40 m-lr-0-xl p-lr-15-sm">
 					<h4 class="mtext-109 cl2 p-b-30">
-						Resumen
+						Informacion De Compra
 					</h4>
 
 					<div class="flex-w flex-t bor12 p-b-13">
@@ -210,15 +210,43 @@ $infoTerminos = !empty(getInfoPage(PTERMINOS)) ? getInfoPage(PTERMINOS)['conteni
 							<span class="mtext-101 cl2">
 								Total:
 							</span>
+			
+		
 						</div>
 
 						<div class="size-209 p-t-1">
 							<span id="totalCompra" class="mtext-110 cl2">
 								<?= SMONEY.formatMoney($total) ?>
 							</span>
+						
 						</div>
+						
+
 					</div>
+					
 					<hr>
+					<div class="flex-w flex-t bor12 p-b-13">
+							<h4 class="mtext-109 cl2 p-b-30">
+								CUENTA BANCARIA<BR>
+								MXT TECHNOLOGY
+							</h4>
+							<div class="size-208">
+							<span class="mtext-101 cl2">
+								Cuenta:
+							</span>
+							</div>
+							
+
+							<div class="size-209">
+							<span id="subTotalCompra" class="mtext-110 cl2">
+								<?= CUENTA_BANCARIA ?>
+							</span>
+						</div>
+
+							
+
+					</div>
+				
 <?php 
 	if(isset($_SESSION['login'])){
 ?>
@@ -226,12 +254,13 @@ $infoTerminos = !empty(getInfoPage(PTERMINOS)) ? getInfoPage(PTERMINOS)['conteni
 						<div id="divCondiciones">
 							<input type="checkbox" id="condiciones" >
 							<label for="condiciones"> Aceptar </label>
+							
 							<a href="#" data-toggle="modal" data-target="#modalTerminos" > Términos y Condiciones </a>
 						</div>
 						<div id="optMetodoPago" class="notblock">	
 							<hr>					
 							<h4 class="mtext-109 cl2 p-b-30">
-								Método de pago
+								Métodos de pago
 							</h4>
 							<div class="divmetodpago">
 
@@ -247,7 +276,7 @@ $infoTerminos = !empty(getInfoPage(PTERMINOS)) ? getInfoPage(PTERMINOS)['conteni
 								<div>
 									<label for="contraentrega">
 										<input type="radio" id="contraentrega" class="methodpago" name="payment-method" value="CT">
-										<span>Mediante Pedido</span>
+										<span>Efectivo o Transferencia</span>
 									</label>
 								</div>
 								<div id="divtipopago" class="notblock" >
@@ -273,7 +302,7 @@ $infoTerminos = !empty(getInfoPage(PTERMINOS)) ? getInfoPage(PTERMINOS)['conteni
 								<!--PAYPAL -->
 								<div id="divpaypal">
 									<div>
-										<p>Para completar la transacción, te enviaremos a los servidores seguros de PayPal.</p>
+										<strong>Para que su compra sea realizada y procesada debe de realizar el deposito bancario</strong>
 									</div>
 									<br>
 									<div id="paypal-btn-container"></div>

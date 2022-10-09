@@ -41,13 +41,13 @@
 					<!--LOGO FB-->
 
 
-						<!--LOGO INSTAGRAM-->
+						<!--LOGO INSTAGRAM
 						
 						<a href="<?= INSTAGRAM ?>" target="_blanck"  class="fs-18 cl7 hov-cl1 trans-04 m-r-16">
 							<i class="fa fa-instagram"></i>
 						</a>
 						
-						<!--LOGO INSTAGRAM-->
+						LOGO INSTAGRAM-->
 
 					<!--LOGO WHATSAPP-->
 						<a href="https://walink.co/4924ab" target="_blanck"  class="fs-18 cl7 hov-cl1 trans-04 m-r-16">
@@ -87,9 +87,9 @@
 						Direcciones
 					</h4>
 					
-						<span style="color:#fff;">SuperMall Local 21 Pb, Ciudad Cochabamba, Bolivia</span>
+						<a href="https://www.google.com/maps/place/SUPERMALL/@-17.3941743,-66.1717731,20.04z/data=!4m5!3m4!1s0x93e374a599c50d9b:0x5463fc450c6e33a8!8m2!3d-17.3942078!4d-66.171631"><span style="color:#fff;">SuperMall Local 21 Pb, Ciudad Cochabamba, Bolivia</span></a>
 						<br><br>
-						<span style="color:#fff;">Esteban Arze</span>
+						<a href="https://www.google.com.bo/maps/place/MXT+MAX+TECHNOLOGY+Central/@-17.4065438,-66.156358,20.02z/data=!4m5!3m4!1s0x0:0x845e7a2ee69b5e35!8m2!3d-17.4063307!4d-66.1561931?hl=es"><span style="color:#fff;">Esteban Arze,Totora</span></a>
 
 						
 					
@@ -97,14 +97,9 @@
 				<!-- DIRECCIONES -->
 
 			</div>
-		
-
 			<div class="p-t-40">
 				<p class="stext-107 cl0 txt-center">
-					
-					<?= NOMBRE_EMPESA; ?> | <?= WEB_EMPRESA; ?>
-				
-				</p>
+					<a href="https://walink.co/c591b0">Powered By Cooper </a></p><br>
 			</div>
 	
 		</div>

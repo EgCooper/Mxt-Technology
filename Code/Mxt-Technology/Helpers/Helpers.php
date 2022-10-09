@@ -128,7 +128,7 @@
             $mail->Host       = 'smtp.gmail.com';                     //Establecer que smtp se usara gmail outlook etc
             $mail->SMTPAuth   = true;                                   //Enable SMTP authentication
             $mail->Username   = 'mxtmaxtechnology@gmail.com';                     //Cuenta de donde enviaremos los correos
-            $mail->Password   = 'pvsygxenypcqypuo';                               //contraseña 
+            $mail->Password   = 'otfqbqcttyxdfrhl';                               //contraseña 
             $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;            //Enable implicit TLS encryption
             $mail->Port       = 465;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
 

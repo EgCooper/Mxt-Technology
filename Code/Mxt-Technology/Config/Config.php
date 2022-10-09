@@ -1,6 +1,6 @@
 <?php 
 	//const BASE_URL = "http://localhost/Mxt-Technology";
-	const BASE_URL = "http://mxttechnology.pinguinos.org/";
+	const BASE_URL = "http://mxttechnology.pinguinos.org";
 
 	//Zona horaria
 	date_default_timezone_set('America/La_Paz');
@@ -30,11 +30,16 @@
 	const SMONEY = "Bs";
 	const CURRENCY = "Bs";
 
+
+	//CUENTA BANCARIA DE LA EMPRESA
+	const CUENTA_BANCARIA ="75906306";
+
 	//Api PayPal
 	//SANDBOX PAYPAL
 	const URLPAYPAL = "https://api-m.sandbox.paypal.com";
 	const IDCLIENTE = "";
 	const SECRET = "";
+	
 	//LIVE PAYPAL
 	//const URLPAYPAL = "https://api-m.paypal.com";
 	//const IDCLIENTE = "";
