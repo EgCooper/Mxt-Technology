@@ -12,11 +12,10 @@ $idpagina = $data['page']['idpost'];
     <?= $data['page']['titulo'] ?>
   </h2>
 </section>
-
-<!-- <section class="py-5 text-center">
+ <section class="py-5 text-center">
     <div class="container">
-      <p>Visitanos y obten los mejores precios del mercado, cualquier artículo que necestas para vivir mejor</p>
-      <a href="" class="btn btn-info">VER PRODUCTOS</a>
+      <p>Visitanos y obten los mejores productos del mercado al mejor precio!</p>
+      <a href="<?= base_url();?>/tienda" class="btn btn-success">VER PRODUCTOS</a>
     </div>
 </section>
 <div class="py-5 bg-light">
@@ -25,44 +24,43 @@ $idpagina = $data['page']['idpost'];
 
       <div class="col-md-4">
         <div class="card mb-4 box-shadow">
-          <img src="<?= media() ?>/images/s1.jpg" alt="Sucural uno">
+          <img src="<?= media() ?>/images/supermall.jpg" alt="Sucural uno">
           <div class="card-body">
-            <p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quaerat necessitatibus eligendi, soluta ipsa natus, at earum qui enim, illum doloremque, accusantium autem nemo est esse nulla neque eaque repellendus amet.</p>
-            <p>Dirección: Antigua Gautemala <br>
-              Teléfono: 4654645 <br>
-              Correo: info@abelosh.com
+        
+            <p>Dirección: SuperMall Local 21 Pb, Ciudad Cochabamba, Bolivia <br>
+              Teléfono:+(591) 4 4666063 <br>
+              Correo: mxtmaxtechnology@gmail.com
             </p>
           </div>
         </div>
       </div>
       <div class="col-md-4">
         <div class="card mb-4 box-shadow">
-          <img src="<?= media() ?>/images/s1.jpg" alt="Sucural uno">
+          <img src="<?= media() ?>/images/audi.jpg" alt="Sucural uno">
           <div class="card-body">
-            <p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quaerat necessitatibus eligendi, soluta ipsa natus, at earum qui enim, illum doloremque, accusantium autem nemo est esse nulla neque eaque repellendus amet.</p>
-            <p>Dirección: Antigua Gautemala <br>
-              Teléfono: 4654645 <br>
-              Correo: info@abelosh.com
+            <p>Dirección: Esteban Arze Totora Quillacollo Ciudad Cochabmaba, Bolivia <br>
+              Teléfono:+(591) 4 4666063 <br>
+              Correo: mxtmaxtechnology@gmail.com
             </p>
           </div>
         </div>
       </div>
       <div class="col-md-4">
         <div class="card mb-4 box-shadow">
-          <img src="<?= media() ?>/images/s1.jpg" alt="Sucural uno">
+          <img src="<?= media() ?>/images/supermall.jpg" alt="Sucural uno">
           <div class="card-body">
-            <p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quaerat necessitatibus eligendi, soluta ipsa natus, at earum qui enim, illum doloremque, accusantium autem nemo est esse nulla neque eaque repellendus amet.</p>
-            <p>Dirección: Antigua Gautemala <br>
-              Teléfono: 4654645 <br>
-              Correo: info@abelosh.com
+            <p>Dirección: SuperMall Local 21 Pb, Ciudad Cochabamba, Bolivia <br>
+              Teléfono:+(591) 4 4666063 <br>
+              Correo: mxtmaxtechnology@gmail.com
             </p>
           </div>
         </div>
       </div>
+     
 
     </div>
   </div>
-</div> -->
+</div> 
 
 <?php
   if(viewPage($idpagina)){

@@ -1,14 +1,14 @@
 <?php 
 	//const BASE_URL = "http://localhost/Mxt-Technology";
-	const BASE_URL = "http://mxttechnology.pinguinos.org";
+	const BASE_URL = "https://mxt-technology.pinguinos.org";
 
 	//Zona horaria
 	date_default_timezone_set('America/La_Paz');
 
 	//Datos de conexión a Base de Datos Host
 	const DB_HOST = "localhost";
-	const DB_NAME = "c4cooper";
-	const DB_USER = "c4cooper";
+	const DB_NAME = "c4mxt";
+	const DB_USER = "c4victor";
 	const DB_PASSWORD = "Cooper75906306";
 	const DB_CHARSET = "utf8";
 

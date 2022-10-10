@@ -297,7 +297,7 @@
 						<i class="zmdi zmdi-search"></i>
 					</button>
 					<input type="hidden" name="p" value="1">
-					<input class="plh3" type="text" name="s" placeholder="Buscar...">
+					<input class="plh3" type="text" name="s" placeholder="Que producto desea buscar?">
 				</form>
 			</div>
 		</div>

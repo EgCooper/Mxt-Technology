@@ -104,18 +104,17 @@ $idpagina = $data['page']['idpost'];
 </section>	
 <!--MAPA PAGINA CONTACTO -->
 <?php 
-	/*	echo $data['page']['contenido'];
-	}else{*/
+		echo $data['page']['contenido'];
+	}else{
 ?>
 
-<!--ESTAMOS TRABAJANDO -->
-<!--
+
 <div>
 	<div class="container-fluid py-5 text-center" >
 		<img src="<?= media() ?>/images/construction.png" alt="En construcción">
 		<h3>Estamos trabajando para usted.</h3>
 	</div>
-</div>-->
+</div>
 <?php 
 	}
 	footerTienda($data);
