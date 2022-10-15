@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Oct 10, 2022 at 12:06 PM
+-- Generation Time: Oct 15, 2022 at 05:12 PM
 -- Server version: 10.5.16-MariaDB
 -- PHP Version: 5.4.16
 
@@ -62,14 +62,6 @@ CREATE TABLE IF NOT EXISTS `contacto` (
   `datecreated` datetime NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_swedish_ci;
 
---
--- Dumping data for table `contacto`
---
-
-INSERT INTO `contacto` (`id`, `nombre`, `email`, `mensaje`, `ip`, `dispositivo`, `useragent`, `datecreated`) VALUES
-(2, 'Victor', 'vicox30@gmail.com', 'hola', '::1', 'PC', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/105.0.0.0 Safari/537.36 Edg/105.0.1343.42', '2022-09-23 14:44:19'),
-(3, 'Victor', 'vicox30@gmail.com', 'Hola', '181.115.167.23', 'PC', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Safari/537.36 Edg/106.0.1370.37', '2022-10-10 11:42:09');
-
 -- --------------------------------------------------------
 
 --
@@ -82,17 +74,16 @@ CREATE TABLE IF NOT EXISTS `detalle_pedido` (
   `productoid` bigint(20) NOT NULL,
   `precio` decimal(11,2) NOT NULL,
   `cantidad` int(11) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=31 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_swedish_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=34 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_swedish_ci;
 
 --
 -- Dumping data for table `detalle_pedido`
 --
 
 INSERT INTO `detalle_pedido` (`id`, `pedidoid`, `productoid`, `precio`, `cantidad`) VALUES
-(27, 23, 10, 1500.00, 1),
-(28, 24, 10, 1500.00, 1),
-(29, 25, 10, 1500.00, 1),
-(30, 26, 9, 500.00, 1);
+(31, 27, 9, 500.00, 1),
+(32, 28, 8, 650.00, 1),
+(33, 29, 9, 500.00, 1);
 
 -- --------------------------------------------------------
 
@@ -119,7 +110,7 @@ CREATE TABLE IF NOT EXISTS `imagen` (
   `id` bigint(20) NOT NULL,
   `productoid` bigint(20) NOT NULL,
   `img` varchar(100) COLLATE utf8mb4_swedish_ci NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=30 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_swedish_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=31 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_swedish_ci;
 
 --
 -- Dumping data for table `imagen`
@@ -132,7 +123,8 @@ INSERT INTO `imagen` (`id`, `productoid`, `img`) VALUES
 (25, 6, 'pro_cbb714a387c2d5da6ce8ebd9827924e9.jpg'),
 (26, 5, 'pro_fc1b534d9d7f0b3ae4ad2a0ba61b990a.jpg'),
 (28, 9, 'pro_fd08a20f9de9caeb8e4d6c2f4bc4dcba.jpg'),
-(29, 10, 'pro_3bc120d33aafbf9cd9319ff987100613.jpg');
+(29, 10, 'pro_3bc120d33aafbf9cd9319ff987100613.jpg'),
+(30, 11, 'pro_6878b4d19941567c8ce8abe40f0128cd.jpg');
 
 -- --------------------------------------------------------
 
@@ -180,17 +172,16 @@ CREATE TABLE IF NOT EXISTS `pedido` (
   `tipopagoid` bigint(20) NOT NULL,
   `direccion_envio` text COLLATE utf8mb4_swedish_ci NOT NULL,
   `status` varchar(100) COLLATE utf8mb4_swedish_ci DEFAULT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=27 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_swedish_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=30 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_swedish_ci;
 
 --
 -- Dumping data for table `pedido`
 --
 
 INSERT INTO `pedido` (`idpedido`, `referenciacobro`, `idtransaccionpaypal`, `datospaypal`, `personaid`, `fecha`, `costo_envio`, `monto`, `tipopagoid`, `direccion_envio`, `status`) VALUES
-(23, '758475647', NULL, NULL, 21, '2022-10-09 00:21:54', 12.00, 1512.00, 2, 'Temporal Alipio Valencia Vega, Cochabamba Cercado', 'Completo'),
-(24, NULL, NULL, NULL, 21, '2022-10-09 17:01:58', 12.00, 1512.00, 3, 'Temporal Alipio Valencia Vega - Faustino Suarez, Cochabamba/Cercado', 'Pendiente'),
-(25, NULL, NULL, NULL, 5, '2022-10-09 17:03:26', 12.00, 1512.00, 2, 'temporal, cocha', 'Pendiente'),
-(26, NULL, NULL, NULL, 23, '2022-10-09 17:36:53', 12.00, 512.00, 3, 'temporal, cocha', 'Pendiente');
+(27, NULL, NULL, NULL, 26, '2022-10-13 13:33:09', 12.00, 512.00, 2, 'Quillacollo, Cochabamba', 'Pendiente'),
+(28, NULL, NULL, NULL, 5, '2022-10-13 22:48:59', 12.00, 662.00, 2, 'temporal, cochabamba', 'Pendiente'),
+(29, '123', NULL, NULL, 29, '2022-10-14 12:14:56', 12.00, 512.00, 2, '6 agosto, cochabamba', 'Cancelado');
 
 -- --------------------------------------------------------
 
@@ -271,7 +262,7 @@ CREATE TABLE IF NOT EXISTS `persona` (
   `rolid` bigint(20) NOT NULL,
   `datecreated` datetime NOT NULL DEFAULT current_timestamp(),
   `status` int(11) NOT NULL DEFAULT 1
-) ENGINE=InnoDB AUTO_INCREMENT=24 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_swedish_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=30 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_swedish_ci;
 
 --
 -- Dumping data for table `persona`
@@ -279,10 +270,11 @@ CREATE TABLE IF NOT EXISTS `persona` (
 
 INSERT INTO `persona` (`idpersona`, `identificacion`, `nombres`, `apellidos`, `telefono`, `email_user`, `password`, `nit`, `nombrefiscal`, `direccionfiscal`, `token`, `rolid`, `datecreated`, `status`) VALUES
 (5, '9519261', 'Administrador', 'Pinto', 75906306, 'vicox30@gmail.com', 'b2f564edaccc0bf0c6c5ee47f702d232689c6e67770ee362b8a2b9330c90fed2', NULL, NULL, NULL, '', 1, '2022-09-23 14:34:08', 1),
-(20, '0909897', 'Juan', 'Torrico', 76474636, 'supervisor@gmail.com', '02423ab2e61297b8262449c93e19be42fb5bbb275860a7d93b1ebdc7b6535ed7', NULL, NULL, NULL, NULL, 2, '2022-10-09 00:14:01', 1),
-(21, '7574632', 'Nicolas', 'Lopez', 76485746, 'cliente@gmail.com', '09a31a7001e261ab1e056182a71d3cf57f582ca9a29cff5eb83be0f0549730a9', NULL, NULL, NULL, NULL, 3, '2022-10-09 00:14:26', 1),
-(22, '7564764', 'Ariel', 'Morales', 65463536, 'vendedor@gmail.com', '56976bf24998ca63e35fe4f1e2469b5751d1856003e8d16fef0aafef496ed044', NULL, NULL, NULL, NULL, 4, '2022-10-09 00:21:02', 1),
-(23, NULL, 'Brenda', 'Mora', 78344556, 'brenda@gmail.com', '7de73a3cc39e668c1d2bd5dbdcb415f23cbb9dc08946f79094a0f769276a0128', NULL, NULL, NULL, NULL, 3, '2022-10-09 17:36:32', 1);
+(25, '80808080', 'Teresa', 'Cutili Quispe', 79328635, 'administrador@gmail.com', '15194f62d1f93661b0d5973b2fee8f67f1f685cbb79605b1b3a9d3b04820231f', NULL, NULL, NULL, NULL, 1, '2022-10-13 13:30:07', 1),
+(26, '7676876', 'Ariel', 'Rodriguez', 78332334, 'cliente@gmail.com', '09a31a7001e261ab1e056182a71d3cf57f582ca9a29cff5eb83be0f0549730a9', NULL, NULL, NULL, NULL, 3, '2022-10-13 13:32:54', 1),
+(27, '7547564', 'Joel Adrian', 'Limpias Rojas', 75960098, 'vendedor@gmail.com', '56976bf24998ca63e35fe4f1e2469b5751d1856003e8d16fef0aafef496ed044', NULL, NULL, NULL, NULL, 4, '2022-10-13 13:35:16', 1),
+(28, '9898978', 'Fernando', 'Mamani', 79719262, 'supervisor@gmail.com', '02423ab2e61297b8262449c93e19be42fb5bbb275860a7d93b1ebdc7b6535ed7', NULL, NULL, NULL, NULL, 2, '2022-10-13 13:36:29', 1),
+(29, NULL, 'Patito', 'Cuag Cuag', 123456789, 'edenszeroelsiecrimson@gmail.com', '5994471abb01112afcc18159f6cc74b4f511b99806da59b3caf5a9c173cacfc5', NULL, NULL, NULL, '', 3, '2022-10-14 12:14:03', 1);
 
 -- --------------------------------------------------------
 
@@ -333,7 +325,7 @@ CREATE TABLE IF NOT EXISTS `producto` (
   `datecreated` datetime NOT NULL DEFAULT current_timestamp(),
   `ruta` varchar(255) COLLATE utf8mb4_swedish_ci NOT NULL,
   `status` int(11) NOT NULL DEFAULT 1
-) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_swedish_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_swedish_ci;
 
 --
 -- Dumping data for table `producto`
@@ -346,7 +338,8 @@ INSERT INTO `producto` (`idproducto`, `categoriaid`, `codigo`, `nombre`, `descri
 (7, 1, '12312412421', 'Teclado G513', '<p>G513 es un teclado para juegos de alto desempe&ntilde;o con interruptores mec&aacute;nicos avanzados GX Brown Tactile.. El reposamanos extra&iacute;ble de espuma viscoel&aacute;stica y la construcci&oacute;n de aleaci&oacute;n de aluminio premium complementan las caracter&iacute;sticas de G513 para hacerlo el mejor de su clase.</p>', 900.00, 10, NULL, '2022-09-23 16:51:25', 'teclado-g513', 1),
 (8, 1, '123123124', 'Headsets Gpro', '<p>Dise&ntilde;ados con y para profesionales. Con sonido envolvente 7.1 de pr&oacute;xima generaci&oacute;n, transductores PRO-G de 50 mm, micr&oacute;fono de varilla de 6 mm PRO y perfiles de ecualizaci&oacute;n con optimizaci&oacute;n profesional disponibles mediante el software para juegos G HUB.</p>', 650.00, 5, NULL, '2022-09-23 16:52:26', 'headsets-gpro', 1),
 (9, 1, '123123444', 'Audifono G332', '<p>Los transductores de 50 mm y el micr&oacute;fono volteable para silenciar de 6 mm producen un gran sonido que permite sumergirse en el juego. Funcionan con PC, Mac, la mayor&iacute;a de consolas y dispositivos m&oacute;viles mediante cable con conector de 3,5 mm.</p>', 500.00, 20, NULL, '2022-09-24 18:07:49', 'audifono-g332', 1),
-(10, 3, '123124124', 'Impresora L3250', '<p>Epson es la marca en la que puede confiar para todas sus necesidades de impresi&oacute;n. Con la tecnolog&iacute;a Heat-Free, EcoTank garantiza un rendimiento &oacute;ptimo, respaldado por hasta 2 a&ntilde;os de garant&iacute;a limitada con registro<sup>2</sup>.</p>', 1500.00, 20, NULL, '2022-09-24 18:40:19', 'impresora-l3250', 0);
+(10, 3, '123124124', 'Impresora L3250', '<p>Epson es la marca en la que puede confiar para todas sus necesidades de impresi&oacute;n. Con la tecnolog&iacute;a Heat-Free, EcoTank garantiza un rendimiento &oacute;ptimo, respaldado por hasta 2 a&ntilde;os de garant&iacute;a limitada con registro<sup>2</sup>.</p>', 1500.00, 20, NULL, '2022-09-24 18:40:19', 'impresora-l3250', 0),
+(11, 1, '4545454321', 'Deco M9 Plus', '', 890.00, 10, NULL, '2022-10-14 17:26:17', 'deco-m9-plus', 1);
 
 -- --------------------------------------------------------
 
@@ -543,7 +536,7 @@ ALTER TABLE `contacto`
 -- AUTO_INCREMENT for table `detalle_pedido`
 --
 ALTER TABLE `detalle_pedido`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=31;
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=34;
 --
 -- AUTO_INCREMENT for table `detalle_temp`
 --
@@ -553,7 +546,7 @@ ALTER TABLE `detalle_temp`
 -- AUTO_INCREMENT for table `imagen`
 --
 ALTER TABLE `imagen`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=30;
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=31;
 --
 -- AUTO_INCREMENT for table `modulo`
 --
@@ -563,7 +556,7 @@ ALTER TABLE `modulo`
 -- AUTO_INCREMENT for table `pedido`
 --
 ALTER TABLE `pedido`
-  MODIFY `idpedido` bigint(20) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=27;
+  MODIFY `idpedido` bigint(20) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=30;
 --
 -- AUTO_INCREMENT for table `permisos`
 --
@@ -573,7 +566,7 @@ ALTER TABLE `permisos`
 -- AUTO_INCREMENT for table `persona`
 --
 ALTER TABLE `persona`
-  MODIFY `idpersona` bigint(20) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=24;
+  MODIFY `idpersona` bigint(20) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=30;
 --
 -- AUTO_INCREMENT for table `post`
 --
@@ -583,7 +576,7 @@ ALTER TABLE `post`
 -- AUTO_INCREMENT for table `producto`
 --
 ALTER TABLE `producto`
-  MODIFY `idproducto` bigint(20) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=11;
+  MODIFY `idproducto` bigint(20) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=12;
 --
 -- AUTO_INCREMENT for table `reembolso`
 --

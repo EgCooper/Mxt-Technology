@@ -32,7 +32,7 @@
 
 
 	//CUENTA BANCARIA DE LA EMPRESA
-	const CUENTA_BANCARIA ="75906306";
+	const CUENTA_BANCARIA ="4069949336";
 
 	//Api PayPal
 	//SANDBOX PAYPAL
@@ -69,7 +69,7 @@
 	const CAT_FOOTER = "1,2,3,4,5";
 
 	//Datos para Encriptar / Desencriptar
-	const KEY = 'abelosh';
+	const KEY = 'cooper';
 	const METHODENCRIPT = "AES-128-ECB";
 
 	//Envío

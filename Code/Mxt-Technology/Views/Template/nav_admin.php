@@ -2,7 +2,7 @@
     
     <div class="app-sidebar__overlay" data-toggle="sidebar"></div>
     <aside class="app-sidebar">
-      <div class="app-sidebar__user"><img class="app-sidebar__user-avatar" src="<?= media();?>/images/avatar5.png" alt="User Image">
+      <div class="app-sidebar__user"><a href= "<?= base_url()?>/usuarios/perfil"><img class="app-sidebar__user-avatar" src="<?= media();?>/images/avatar5.png" alt="User Image"></a>
         <div>
           <p class="app-sidebar__user-name"><?= $_SESSION['userData']['nombres']; ?></p>
           <p class="app-sidebar__user-designation"><?= $_SESSION['userData']['nombrerol']; ?></p>

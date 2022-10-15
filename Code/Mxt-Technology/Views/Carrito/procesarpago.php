@@ -176,7 +176,7 @@ $infoTerminos = !empty(getInfoPage(PTERMINOS)) ? getInfoPage(PTERMINOS)['conteni
 
 			<div class="col-sm-10 col-lg-7 col-xl-5 m-lr-auto m-b-50">
 				<div class="bor10 p-lr-40 p-t-30 p-b-40 m-l-63 m-r-40 m-lr-0-xl p-lr-15-sm">
-					<h4 class="mtext-109 cl2 p-b-30">
+					<h4 class="mtext-109 cl2 p-b-30" style="color:#70e000;">
 						Informacion De Compra
 					</h4>
 
@@ -225,27 +225,25 @@ $infoTerminos = !empty(getInfoPage(PTERMINOS)) ? getInfoPage(PTERMINOS)['conteni
 					</div>
 					
 					<hr>
-					<div class="flex-w flex-t bor12 p-b-13">
-							<h4 class="mtext-109 cl2 p-b-30">
-								CUENTA BANCARIA<BR>
-								MXT TECHNOLOGY
+					<div class="flex-w flex-t bor12 p-b-13" id="">
+							<h4 class="mtext-109 cl2 p-b-30" style= "color:#70e000;">
+								INFORMACION DEPOSITO<BR>
+								MERCANTIL SANTA CRUZ
 							</h4>
-							<div class="size-208">
-							<span class="mtext-101 cl2">
-								Cuenta:
-							</span>
-							</div>
-							
+						
 
 							<div class="size-209">
-							<span id="subTotalCompra" class="mtext-110 cl2">
-								<?= CUENTA_BANCARIA ?>
-							</span>
-						</div>
-
 							
+							
+								<span class="mtext-110 c12">Cuenta Bancaria:<B><?=CUENTA_BANCARIA ?></B></span>
+						
+						
+						</div>
+						
+					
 
 					</div>
+						
 				
 <?php 
 	if(isset($_SESSION['login'])){
@@ -255,7 +253,7 @@ $infoTerminos = !empty(getInfoPage(PTERMINOS)) ? getInfoPage(PTERMINOS)['conteni
 							<input type="checkbox" id="condiciones" >
 							<label for="condiciones"> Aceptar </label>
 							
-							<a href="#" data-toggle="modal" data-target="#modalTerminos" > Términos y Condiciones </a>
+							<a  style ="color:#70e000;"href="#" data-toggle="modal" data-target="#modalTerminos" > Términos y Condiciones </a>
 						</div>
 						<div id="optMetodoPago" class="notblock">	
 							<hr>					
