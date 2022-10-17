@@ -67,10 +67,13 @@
 		<tbody>
 			<tr>
 				<td class="wd33">
+					<!-- LOGO EMPRESA PARA EL COMPROBANTE 
 					<img src="<?= media() ?>/tienda/images/logo.png" alt="Logo">
+					 LOGO EMPRESA PARA EL COMPROBANTE -->
+
 				</td>
 				<td class="text-center wd33">
-					<h4><strong><?= NOMBRE_EMPRESA ?></strong></h4>
+					<h4><strong><?= NOMBRE_EMPESA ?></strong></h4>
 					<p><?= DIRECCION ?> <br>
 					Teléfono: <?= TELEMPRESA ?> <br>
 					Email: <?= EMAIL_EMPRESA  ?></p>
