@@ -24,10 +24,12 @@ headerTienda($data);
     </body> </p><br>
     
     
-    <p>Puede ver el estado de su pedido en su cuenta en la seccion de <a href="<?=base_url();?>/pedidos" style="color:#70e000"><b>PEDIDOS</b></a></p>
+    <p>Puede ver el estado de su pedido en su cuenta en la seccion de <a href="<?=base_url();?>/pedidos" style="color:#70e000"><b>PEDIDOS</b></a></p><br>
+    <p>POR FAVOR LLENE SUS DATOS PRESIONANDO EL BOTON DE CONTINUAR</p>
 
     <br>
-  <a class="btn btn-success" href="<?= base_url(); ?>" role="button">Continuar</a>
+  <a class="btn btn-success" href="<?= base_url(); ?>/usuarios/perfil" role="button">Continuar</a>
+      
 </div>
 
 <?php 
